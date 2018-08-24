@@ -7,9 +7,9 @@ _Last update: August 23, 2018_
 2. Select _Create Function_
 3. Give your function a name
 4. Create a role
-  a. Create new role from template(s)
-  b. Provide a role name
-  c. From Policy Templates select the _Simple Microservice permissions_
+  i. Create new role from template(s)
+  ii. Provide a role name
+  iii. From Policy Templates select the _Simple Microservice permissions_
 5. _Create function_! Huzzah!
 
 You've now created an AWS Lambda function and should be looking at the details of your new function.
