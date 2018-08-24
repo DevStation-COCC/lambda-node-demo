@@ -1,5 +1,8 @@
 $(function(){
-  let url = 'https://lxfnjoj8q4.execute-api.us-west-2.amazonaws.com/default/my-fun-function';
+  //Add your API Gateway url here
+  let url = '';
+
+  //Build a GET request
   let request = {
     url: url,
     type: 'GET',
@@ -17,6 +20,7 @@ $(function(){
     }
   };
 
+  //Make the AJAX request
   $.ajax(request);
 });
 
@@ -26,7 +30,7 @@ $(function(){
 
 This function simply shows how to use console.log() in the AWS Lambda environment, and some information about the context and event variables.
 
-exports.handler = (event, context, callback) => {\
+exports.handler = (event, context, callback) => {
     console.log("howdy");
     console.log('remaining time =', context.getRemainingTimeInMillis());
     console.log('functionName =', context.functionName);
