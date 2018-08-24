@@ -41,6 +41,8 @@ exports.handler = (event, context, callback) => {
     callback(null, {"response": event});
 };
 
+### EXAMPLE TWO ###
+
 This function creates a basic HTTP response so that we can use our AWS Lambda function as an API endpoint.
 
 exports.handler = (event, context, callback) => {
