@@ -1,5 +1,6 @@
 # AWS Lambda with Node Demo
 This is a basic demo guide on how to get started with AWS Lambda using Node.
+_Last update: August 23, 2018_
 
 ### Create The Function!
 1. Visit the [AWS Lambda](https://us-west-2.console.aws.amazon.com/lambda/home) console.
@@ -28,11 +29,11 @@ You've now created an AWS Lambda function and should be looking at the details o
   - __NOTE:__ REMEMBER TO HIT SAVE!
 2. Run the _Test_ you created previously.
 
-##### Question
-At this point your response body should be exactly the same as the JSON data in your test. Why is the response the same as the JSON data in your test?
+#### Question
+At this point your response body should be exactly the same as the JSON data in your test. Why?
 
-##### Answer
-The event object holds the data passed into our function, and the callback is passing the event object into the JSON response being returned by our function.
+#### Answer
+The event object holds the data passed into our function, and the callback is passing the event object into the JSON response returned by our function.
 
 ### API Endpoint
 1. In the _Designer_ under _Add Trigger_ click on _API Gateway_.
