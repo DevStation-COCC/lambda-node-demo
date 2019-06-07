@@ -30,7 +30,7 @@ $(function(){
 
 This function simply shows how to use console.log() in the AWS Lambda environment, and some information about the context and event variables.
 
-exports.handler = (event, context, callback) => {
+exports.handler = async (event, context) => {
     console.log("howdy");
     console.log('remaining time =', context.getRemainingTimeInMillis());
     console.log('functionName =', context.functionName);
@@ -38,15 +38,15 @@ exports.handler = (event, context, callback) => {
     console.log('logGroupName =', context.log_group_name); //Will be undefined, part of CloudWatch
     console.log('logStreamName =', context.log_stream_name); //Will be undefined, part of CloudWatch
     console.log('clientContext =', context.clientContext); //Will be undefined, used for mobile applications
-    callback(null, {"response": event});
+    return {"response": event};
 };
 
 ### EXAMPLE TWO ###
 
 This function creates a basic HTTP response so that we can use our AWS Lambda function as an API endpoint.
 
-exports.handler = (event, context, callback) => {
-    
+exports.handler = async (event, context, callback) => {
+
     var responseBody = {
         "key3": "value3",
         "key2": "value2",
@@ -63,6 +63,6 @@ exports.handler = (event, context, callback) => {
         "body": JSON.stringify(responseBody),
         "isBase64Encoded": false
     };
-    callback(null, response);
+    return response;
 };
 */
